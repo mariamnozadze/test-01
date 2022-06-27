@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/****MAIN-TITLE***/
+.main-title {
+  background-color: #111;
+  height: 15vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  color: #ffffff;
+  animation: Neon 4s infinite;
+}
+
+@keyframes Neon {
+  0%,
+  39%,
+  41%,
+  59%,
+  61%,
+  100% {
+    text-shadow: #fff 0 0 12px, rgb(223, 202, 13) 0 0 24px,
+      rgb(223, 202, 13) 0 0 36px;
+  }
+  40%,
+  60% {
+    text-shadow: none;
+  }
+}
+
+/**** NAVBAR ***/
+.sidenav {
+  width: 260px;
+  position: relative;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+/* navigation links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover,
+.closebtn:hover,
+.openbtn:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: -6px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  position: absolute;
+  top: 0;
+  font-size: 36px;
+  color: #818181;
+}
+
+/***MAIN - CONTENT****/
+
+/*  push the page content to the right when you open the side navigation */
+#main-content {
+  position: relative;
+  transition: margin-left 0.5s;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+}
+
+.earth {
+  height: 100%;
+  width: 100%;
+  right: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/***IMAGES***/
+.astronaut {
+  height: 200px;
+  position: absolute;
+  top: 190px;
+  left: 360px;
+  animation: Astronaut 4s infinite;
+}
+
+@keyframes Astronaut {
+  100% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  0% {
+    transform: translateY(-15px);
+  }
+}
+
+.phone {
+  height: 50px;
+  bottom: 400px;
+  left: 300px;
+  position: absolute;
+  animation: Phone 20s infinite;
+}
+
+@keyframes Phone {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*** FOOTER ***/
+
+footer {
+  background-color: #111;
+  color: #818181;
+  text-align: center;
+}
+footer p {
+  padding: 10px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}

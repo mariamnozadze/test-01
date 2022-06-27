@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>test_01</title>
+  </head>
+  <body>
+    <main>
+      <div class="main-title">
+        <h1>hello from space</h1>
+      </div>
+      <div class="main-container">
+        <div id="sideNav" class="sidenav">
+          <a href="#" class="closebtn" onclick="closeNav()">
+            <i class="bx bx-x"></i>
+          </a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+        </div>
+
+        <!-- to open the sidenav -->
+
+        <div id="main-content">
+          <div id="openBtn">
+            <a href="#" class="openbtn" onclick="openNav()">
+              <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+          <img class="earth" src="img/earth.jpg" />
+          <img class="astronaut" src="img/astronaut.png" />
+          <img class="phone" src="img/phone.png" />
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>By Mariam Nozadze</p>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+  </body>
+</html>
